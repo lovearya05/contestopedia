@@ -1,6 +1,8 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+// import firebase from 'firebase';
+
 const firebaseConfig = {
   apiKey: "AIzaSyAPyVBAi8FsPjrkkln-Uu0C3RxQj0dVTn4",
   authDomain: "contestopedia-91d41.firebaseapp.com",
@@ -23,5 +25,9 @@ if(firebase.apps.length === 0){
 const db = app.firestore();
 const auth = firebase.auth();
 
-
 export {db,auth};
+
+// firebase.initializeApp(firebaseConfig);
+// var db = firebase.firestore();
+  
+// export default db;

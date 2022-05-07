@@ -6,13 +6,13 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 // Screens
 import Contests from './screens/Contests'
 import HomeScreen from './screens/HomeScreen';
-import Profile from './screens/Profile';
+import Setting from './screens/Setting';
 import Search from './screens/Search';
 import Placement from './screens/Placement';
 
 //Screen names
 const homeName = "Home";
-const ConstProfile = "Profile";
+const ConstSetting = "Setting";
 const ConstSearch = "Search";
 const ConstPlacement = "Placement";
 const ConstContests = "Contests";
@@ -32,8 +32,8 @@ function MainContainer() {
             if (rn === homeName) {
               iconName = focused ? 'home' : 'home-outline';
 
-            } else if (rn === ConstProfile) {
-              iconName = focused ? 'man' : 'man';
+            } else if (rn === ConstSetting) {
+              iconName = focused ? 'settings-outline' : 'settings-outline';
             
             } else if (rn === ConstSearch) {
                 iconName = focused ? 'search' : 'search-outline';
@@ -59,7 +59,7 @@ function MainContainer() {
         <Tab.Screen name={ConstSearch} component={Search} />
         <Tab.Screen name={ConstPlacement} component={Placement} />
         <Tab.Screen name={ConstContests} component={Contests} />
-        <Tab.Screen name={ConstProfile} component={Profile} />
+        <Tab.Screen name={ConstSetting} component={Setting} />
 
       </Tab.Navigator>
     </NavigationContainer>

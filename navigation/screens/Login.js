@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import 'react-native-gesture-handler';
+// import 'react-native-gesture-handler';
 
 import {
   StyleSheet,
@@ -13,8 +13,8 @@ import {
 } from "react-native";
  
 export default function Login({navigation}) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
  
   return (
     <View style={styles.container}>
@@ -48,7 +48,7 @@ export default function Login({navigation}) {
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles} onPress={() => navigation.navigate("Signup")} >SiGNUP</Text>
+        {/* <Text style={styles}>SiGNUP</Text> */}
       </TouchableOpacity>
     </View>
   );
@@ -66,15 +66,15 @@ const styles = StyleSheet.create({
     marginBottom: 40,borderRadius:50
   },
  
-  inputView: {
-    backgroundColor: "#e31b5e",
-    borderRadius:8,
-    width: "70%",
-    height: 45,
-    marginBottom: 20,
- 
-    alignItems: "center",
-  },
+    inputView: {
+      backgroundColor: "#e31b5e",
+      borderRadius:8,
+      width: "70%",
+      height: 45,
+      marginBottom: 20,
+  
+      alignItems: "center",
+    },
  
   TextInput: {
     height: 50,

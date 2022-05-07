@@ -10,17 +10,17 @@ import SignUpScreen from './SignUp';
 // import { NavigationContainer } from '@react-navigation/native';
 
 
-// export default function RootStack ({ navigation }){
-    //     return(
-        //         <>
-        //             <SignInScreen />
-        //         </>
-        //     );
-        // }
+export default function RootStack ({ navigation }){
+        return(
+                <>
+                    <SignInScreen />
+                </>
+            );
+        }
         
         
         
-const Stack = createStackNavigator();
+// const Stack = createStackNavigator();
         
 // function RootStack() {
 //     return (
@@ -31,14 +31,14 @@ const Stack = createStackNavigator();
 //     );
 //   }
 
-const RootStack = () => (
-<NavigationContainer> 
-    <Stack.Navigator>
-        <Stack.Screen name="Login" component={SignInScreen}/>
-        <Stack.Screen name="Signup" component={SignUpScreen}/>
-    </Stack.Navigator>
+// const RootStack = () => (
+// <NavigationContainer> 
+//     <Stack.Navigator>
+//         <Stack.Screen name="Login" component={SignInScreen}/>
+//         <Stack.Screen name="Signup" component={SignUpScreen}/>
+//     </Stack.Navigator>
 
-</NavigationContainer>
-);
+// </NavigationContainer>
+// );
 
-export default RootStack;
+// export default RootStack;
