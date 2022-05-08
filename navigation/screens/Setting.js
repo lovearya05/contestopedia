@@ -14,15 +14,21 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Setting({ navigation }) {
     return (
-        // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        //     <TouchableOpacity style={styles.Btn}>
-        //         <Text style={styles.Text}>How to Navigate? 🤷‍♀️</Text>
-        //     </TouchableOpacity>
-        //     <TouchableOpacity style={styles.Btn}>
-        //         <Text style={styles.Text}>Choose Contest Category</Text>
-        //     </TouchableOpacity>
-        // </View>
-            <SelPlatform/>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity style={styles.Btn}>
+                <Text style={styles.Text}>How to Navigate? 🤷‍♀️</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Btn}>
+                <Text style={styles.Text}>Choose Contest Category</Text>
+            </TouchableOpacity>
+
+            <Button title="Home" onPress={()=>
+            navigation.navigate('SelPlatform')}>
+                
+            </Button>
+        </View>
+
+            // <SelPlatform/>
         
     );
 }

@@ -1,19 +1,19 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-import 'react-native-gesture-handler';
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+// import { createStackNavigator } from '@react-navigation/stack';
+// import {NavigationContainer} from '@react-navigation/native';
+// import 'react-native-gesture-handler';
+// import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 
-import SignInScreen from './Login';
-import SignUpScreen from './SignUp';
+import Login from './Login';
+// import SignUp from './SignUp';
 // import { NavigationContainer } from '@react-navigation/native';
 
 
 export default function RootStack ({ navigation }){
         return(
                 <>
-                    <SignInScreen />
+                    <Login />
                 </>
             );
         }

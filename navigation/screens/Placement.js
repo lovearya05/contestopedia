@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ScrollView,View, Text } from 'react-native';
-// import PlacementCard from './PlacementCard';
+import PlacementCard from './PlacementCard';
 // import {db} from './navigation/screens/firebase'
 // import ReadData from './ReadData';
 
@@ -31,19 +31,19 @@ export default function Placement({ navigation }) {
     return (
     <>
 
-        <View>
+        {/* <View>
             <Text>hiiiiiiiiiiiiiii</Text>
-        </View>
+        </View> */}
        {/* getCities() */}
         {/* <ReadData/> */}
         
         {/* <View>
             <Text>placement card</Text>
         </View> */}
-        {/* <ScrollView> */}
-            {/* <PlacementCard/> */}
+        <ScrollView>
+            <PlacementCard/>
  
-        {/* </ScrollView> */}
+        </ScrollView>
     </>
     );
 }
