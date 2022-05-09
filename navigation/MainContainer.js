@@ -3,6 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Setting a timer']);
+LogBox.ignoreAllLogs();
+
 // Screens
 import Contests from './screens/Contests'
 import HomeScreen from './screens/HomeScreen';

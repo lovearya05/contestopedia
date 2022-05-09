@@ -7,8 +7,9 @@ export default function About({ navigation }) {
 // const Help = () => {
     return (
     <>
+    {/* <View> */}
         <ScrollView>
-            <Text style={{fontSize:50,marginLeft:450,marginTop:20,marginBottom:20}}>Need Help? We are here</Text>
+            <Text >Need Help? We are here</Text>
             <Text style={{fontSize:20,marginLeft:100 , marginBottom:20}}>All the content here is shown in the forms of cards and you will see that it is shown in the vibrant theme of Black and White .The pages we have are:</Text>
             <Text>Contests: </Text>
             <Text>      It is for having a track of all the contests for which we have only 24 hours left.You can have a track of the starting time and ending time and you will be provided with the URL links which you can copy and access the contests .</Text>
@@ -33,6 +34,7 @@ export default function About({ navigation }) {
 
             <Text>Thank You for visiting us.</Text>
         </ScrollView>
+        {/* </View> */}
     </>
     );
 }
