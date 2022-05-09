@@ -4,8 +4,8 @@ import React from 'react';
 // import 'react-native-gesture-handler';
 // import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-
-import Login from './Login';
+ 
+import About from './About';
 // import SignUp from './SignUp';
 // import { NavigationContainer } from '@react-navigation/native';
 
@@ -13,7 +13,7 @@ import Login from './Login';
 export default function RootStack ({ navigation }){
         return(
                 <>
-                    <Login />
+                    <About/>
                 </>
             );
         }
