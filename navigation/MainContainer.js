@@ -16,7 +16,7 @@ import Placement from './screens/Placement';
 
 //Screen names
 const homeName = "Home";
-const ConstSetting = "Setting";
+const ConstSetting = "Help";
 const ConstSearch = "Search";
 const ConstPlacement = "Placement";
 const ConstContests = "Contests";
@@ -37,7 +37,7 @@ function MainContainer() {
               iconName = focused ? 'home' : 'home-outline';
 
             } else if (rn === ConstSetting) {
-              iconName = focused ? 'settings-outline' : 'settings-outline';
+              iconName = focused ? 'help-with-circle' : 'help-with-circle';
             
             } else if (rn === ConstSearch) {
                 iconName = focused ? 'search' : 'search-outline';

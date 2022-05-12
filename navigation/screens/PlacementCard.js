@@ -12,7 +12,7 @@ export default function PlacementCard({ navigation }) {
     const [myData, setMyData] = useState([]);
     const getUserData= async ()=>{
     try{
-            const response = await fetch("https://mocki.io/v1/ec31de03-65cc-4998-b715-355421ec6d79");
+            const response = await fetch("https://mocki.io/v1/2b047375-88ff-4211-93f6-f99e33f0f31b");
             const realData = await response.json();
             setMyData(realData);
             setIsLoaded(false);
