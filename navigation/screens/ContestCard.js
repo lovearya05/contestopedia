@@ -1,15 +1,11 @@
 import React, {useState,useEffect} from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import { FlatList } from 'react-native-web';
-
-// import { useEffect } from 'react/cjs/react.production.min';
-
+import { View, Text,FlatList, StyleSheet, Dimensions,Linking } from 'react-native';
 
 
 export default function ContestCard({ navigation }) {
     
     //loading screen
-    // const[isLoaded, setIsLoaded] = useState(true);
+    const[isLoaded, setIsLoaded] = useState(true);
 
 
     //API data fetch
@@ -17,14 +13,13 @@ export default function ContestCard({ navigation }) {
     const getUserData= async ()=>{
     try{
             const response = await fetch("https://kontests.net/api/v1/all");
-            
             const realData = await response.json();
             setMyData(realData);
-            // setIsLoaded(false);
+            setIsLoaded(false);
             // console.log(realData);
 
         }catch(error){
-            // console.log(error);
+            console.log(error);
         }
     };
     
@@ -37,12 +32,13 @@ export default function ContestCard({ navigation }) {
         return(
         <View style={styles.card}>
         <View style={styles.cardContainer}>
-            <h1>          Contest Name : {item.name}</h1>
-            <Text style={{ flex: 1, alignItems: 'center', justifyContent: 'center' , fontFamily: "serif",fontSize:'100'}}>   Start Time : {item.start_time}</Text>
-            <Text  style={{ flex: 1, alignItems: 'center', justifyContent: 'center', fontFamily: "serif" }}>   End Time : {item.end_time}</Text>
-            <Text style={{ flex: 1, alignItems: 'center', justifyContent: 'center', fontFamily: "serif" }}>    Start in 24Hours : </Text>
-            <Text style={{ flex: 1, alignItems: 'center', justifyContent: 'center', fontFamily: "serif" }}>    URL : {item.url}</Text>
-
+             
+            <Text style={styles.itemName} >Contest Name : {item.name}</Text>
+            <Text style={styles.itemStyle}>Start Time : {item.start_time}</Text>
+            <Text style={styles.itemStyle}>End Time : {item.end_time}</Text>
+            <Text style={styles.itemStyle}>Start in 24Hours : </Text>
+            {/* <Text style={styles.itemurl} onPress={() => Linking.openURL(item.url)}>{item.url}</Text> */}
+            <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>Go To Contest</Text>
         </View>
             
         </View>
@@ -68,10 +64,11 @@ export default function ContestCard({ navigation }) {
 const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     cardContainer: { width: deviceWidth-25,
-    backgroundColor: 'transparent',
-    height:200,
+    backgroundColor: '#17D3DF',
+    // height:200,
     borderRadius:20,
     marginLeft:12,
+    padding:10,
     marginTop:30,
 
     shadowColor: '#000',
@@ -83,4 +80,56 @@ const styles = StyleSheet.create({
     shadowRadius:5,
     elevation: 9,
 },
+url:{
+    backgroundColor:"white",
+    borderRadius:10,
+    width:115,
+    padding:8,
+    // height:20,
+    // fontWeight:700,
+},
+itemStyle: {
+    paddingLeft: 10,
+    paddingBottom:8,
+    color:"#fff",
+    fontSize:18
+  },
+  itemName:{
+    paddingLeft:10,
+    paddingBottom:8,
+    color:"#000",
+    fontSize:25,
+    fontWeight:"bold"
+  },
+  cardStyle:{
+      marginTop:0,
+  },
+  itemurl:{
+    paddingLeft: 10,
+    paddingBottom:8,
+    color:"white",
+    fontWeight:"bold",
+    fontSize:18
+  },
+  textInputStyle: {
+    height: 40,
+    // borderWidth: 1,
+    paddingLeft: 20,
+    margin: 5,
+    borderColor: '#009688',
+    backgroundColor: '#FFFFFF',
+  },
+  searchCard:{
+      padding:5,
+      paddingBottom:15,
+      paddingTop:15,
+      borderWidth:1,
+      borderColor:"#fff",
+      backgroundColor:"orange",
+      borderRadius:20,
+      marginTop:0,
+      marginBottom:0,
+      marginLeft:10,
+      marginRight:10,
+  }
 });

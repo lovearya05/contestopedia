@@ -3,16 +3,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Setting a timer']);
+LogBox.ignoreAllLogs();
+
 // Screens
 import Contests from './screens/Contests'
 import HomeScreen from './screens/HomeScreen';
-import Profile from './screens/Profile';
+import Setting from './screens/Setting';
 import Search from './screens/Search';
 import Placement from './screens/Placement';
 
 //Screen names
 const homeName = "Home";
-const ConstProfile = "Profile";
+const ConstSetting = "Help";
 const ConstSearch = "Search";
 const ConstPlacement = "Placement";
 const ConstContests = "Contests";
@@ -32,8 +36,8 @@ function MainContainer() {
             if (rn === homeName) {
               iconName = focused ? 'home' : 'home-outline';
 
-            } else if (rn === ConstProfile) {
-              iconName = focused ? 'man' : 'man';
+            } else if (rn === ConstSetting) {
+              iconName = focused ? 'help-with-circle' : 'help-with-circle';
             
             } else if (rn === ConstSearch) {
                 iconName = focused ? 'search' : 'search-outline';
@@ -49,7 +53,7 @@ function MainContainer() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: 'tomato',
+          activeTintColor: 'orange',
           inactiveTintColor: 'grey',
           labelStyle: { paddingBottom: 5, fontSize: 10 },
           style: { padding: 10, height: 70}
@@ -59,7 +63,7 @@ function MainContainer() {
         <Tab.Screen name={ConstSearch} component={Search} />
         <Tab.Screen name={ConstPlacement} component={Placement} />
         <Tab.Screen name={ConstContests} component={Contests} />
-        <Tab.Screen name={ConstProfile} component={Profile} />
+        <Tab.Screen name={ConstSetting} component={Setting} />
 
       </Tab.Navigator>
     </NavigationContainer>

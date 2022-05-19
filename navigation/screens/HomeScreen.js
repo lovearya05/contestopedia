@@ -51,36 +51,42 @@ export default function ContestCard({ navigation }) {
 
 
     return (
-        // <View style={styles.cardContainer}>
-        //     <Text>Company Name : </Text>
-        //     <Text>Eligibility :</Text>
-        //     <Text>Last Date to Apply :</Text>
-        //     <Text>URL :</Text>
-        //     <Text>Description :</Text>
-
-        // </View>
-            <FlatList 
-                data={myData}
-                renderItem={showUserData}/>
+        // <SafeAreaView style={style.container}>
+            //<ScrollView>
+            //  {postMessage.map((HomeCards,index)=>(
+                //      <Post HomeCards={HomeCards} key={index}/>
+                //      
+                //  ))}
+                //<HomeCards/>
+                //   </ScrollView>
+                
+                // {/* </SafeAreaView> */}
+                //  <View >
+                //      <Text>Latest Contests</Text>
+                //  </View>
+                
+            <>
+            {/* <Text style={styles.txt}>TRENDING CONTESTS</Text> */}
+            <Text>TRENDING CONTESTS</Text>
+            <ScrollView>
+                <HomeCards/>
+                {/* <HomeCards/>
+                <HomeCards/>
+                <HomeCards/>
+                <HomeCards/> */}
+            </ScrollView>
+        </>
     );
 }
-// const deviceWidth = Math.round(Dimensions.get('window'.width))
-const deviceWidth = Dimensions.get('window').width;
-const styles = StyleSheet.create({
-    cardContainer: { width: deviceWidth-25,
-    backgroundColor: 'transparent',
-    height:200,
-    borderRadius:20,
-    marginLeft:12,
-    marginTop:30,
+// const styles = StyleSheet.create({
+// txt:{
+//     // backgroundColor:"white",
+//     // borderRadius:10,
+//     // width:115,
+//     // padding:8,
+//     // height:20,
+//     // fontWeight:700,
 
-    shadowColor: '#000',
-    shadowOffset: {
-        width:5,
-        height: 5,
-    },
-    shadowOpacity: 0.75,
-    shadowRadius:5,
-    elevation: 9,
-},
-});
+// },
+
+// });

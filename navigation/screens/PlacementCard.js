@@ -1,8 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import { FlatList } from 'react-native-web';
-// import { useEffect } from 'react/cjs/react.production.min';
-
+import { View, Text,FlatList, StyleSheet, Dimensions,Linking } from 'react-native';
 
 
 export default function PlacementCard({ navigation }) {
@@ -15,15 +12,14 @@ export default function PlacementCard({ navigation }) {
     const [myData, setMyData] = useState([]);
     const getUserData= async ()=>{
     try{
-            const response = await fetch("https://kontests.net/api/v1/codeforces");
-            
+            const response = await fetch("https://mocki.io/v1/2b047375-88ff-4211-93f6-f99e33f0f31b");
             const realData = await response.json();
             setMyData(realData);
             setIsLoaded(false);
             // console.log(realData);
 
         }catch(error){
-            // console.log(error);
+            console.log(error);
         }
     };
     
@@ -36,9 +32,13 @@ export default function PlacementCard({ navigation }) {
         return(
         <View style={styles.card}>
         <View style={styles.cardContainer}>
-             <text style={styles.bioData}>Name..{item.name}</text>
-             <text style={styles.bioData}>URL..{item.url}</text>
-             <text style={styles.bioData}>Start Time..{item.start_time}</text>
+             
+            <Text style={styles.itemName} >Job Role : {item.role}</Text>
+            <Text style={styles.itemStyle}>Qualification : {item.qualification}</Text>
+            <Text style={styles.itemStyle}>Last Date to Apply : {item.lastDate}</Text>
+            <Text style={styles.itemStyle}>Role Description : {item.description}</Text>
+            {/* <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>{item.url}</Text> */}
+            <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>Apply Now</Text>
         </View>
             
         </View>
@@ -64,10 +64,11 @@ export default function PlacementCard({ navigation }) {
 const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     cardContainer: { width: deviceWidth-25,
-    backgroundColor: '#ff714e',
-    height:200,
+    backgroundColor: 'red',
+    // height:200,
     borderRadius:20,
-    marginLeft:29,
+    marginLeft:12,
+    padding:10,
     marginTop:30,
 
     shadowColor: '#000',
@@ -79,4 +80,56 @@ const styles = StyleSheet.create({
     shadowRadius:5,
     elevation: 9,
 },
+url:{
+    backgroundColor:"white",
+    borderRadius:10,
+    width:100,
+    padding:8,
+    // height:20,
+    // fontWeight:700,
+},
+itemStyle: {
+    paddingLeft: 10,
+    paddingBottom:8,
+    color:"#fff",
+    fontSize:18
+  },
+  itemName:{
+    paddingLeft:10,
+    paddingBottom:8,
+    color:"#000",
+    fontSize:25,
+    fontWeight:"bold"
+  },
+  cardStyle:{
+      marginTop:0,
+  },
+  itemurl:{
+    paddingLeft: 10,
+    paddingBottom:8,
+    color:"white",
+    fontWeight:"bold",
+    fontSize:18
+  },
+  textInputStyle: {
+    height: 40,
+    // borderWidth: 1,
+    paddingLeft: 20,
+    margin: 5,
+    borderColor: '#009688',
+    backgroundColor: '#FFFFFF',
+  },
+  searchCard:{
+      padding:5,
+      paddingBottom:15,
+      paddingTop:15,
+      borderWidth:1,
+      borderColor:"#fff",
+      backgroundColor:"orange",
+      borderRadius:20,
+      marginTop:0,
+      marginBottom:0,
+      marginLeft:10,
+      marginRight:10,
+  }
 });
