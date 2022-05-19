@@ -56,10 +56,11 @@ const SearchScreen = () => {
     //   </Text>
    <>
         <View style={styles.searchCard}>
-            <Text style={styles.itemName} onPress={() => getItem(item)}>{item.name}</Text>
+            <Text style={styles.itemName} >{item.name}</Text>
             <Text style={styles.itemStyle}>{item.start_time}</Text>
             <Text style={styles.itemStyle}>{item.end_time}</Text>
-            <Text style={styles.itemUrl} onPress={() => Linking.openURL(item.url)} >{item.url}</Text>
+            {/* <Text style={styles.itemUrl} onPress={() => Linking.openURL(item.url)} >{item.url}</Text> */}
+            <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>Go To Contest</Text>
         </View>
    </>
     );
@@ -125,6 +126,14 @@ const styles = StyleSheet.create({
   cardStyle:{
       marginTop:0,
   },
+  url:{
+    backgroundColor:"white",
+    borderRadius:10,
+    width:115,
+    padding:8,
+    // height:20,
+    // fontWeight:700,
+},
   itemUrl:{
     paddingLeft: 10,
     paddingBottom:8,

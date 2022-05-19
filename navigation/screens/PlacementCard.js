@@ -37,7 +37,8 @@ export default function PlacementCard({ navigation }) {
             <Text style={styles.itemStyle}>Qualification : {item.qualification}</Text>
             <Text style={styles.itemStyle}>Last Date to Apply : {item.lastDate}</Text>
             <Text style={styles.itemStyle}>Role Description : {item.description}</Text>
-            <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>{item.url}</Text>
+            {/* <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>{item.url}</Text> */}
+            <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>Apply Now</Text>
         </View>
             
         </View>
@@ -63,7 +64,7 @@ export default function PlacementCard({ navigation }) {
 const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     cardContainer: { width: deviceWidth-25,
-    backgroundColor: 'orange',
+    backgroundColor: 'red',
     // height:200,
     borderRadius:20,
     marginLeft:12,
@@ -78,6 +79,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.75,
     shadowRadius:5,
     elevation: 9,
+},
+url:{
+    backgroundColor:"white",
+    borderRadius:10,
+    width:100,
+    padding:8,
+    // height:20,
+    // fontWeight:700,
 },
 itemStyle: {
     paddingLeft: 10,

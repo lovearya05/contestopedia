@@ -19,7 +19,8 @@ export default function HomeScreen({ navigation }) {
                 //  </View>
                 
             <>
-            <Text>Latest Contest</Text>
+            {/* <Text style={styles.txt}>TRENDING CONTESTS</Text> */}
+            <Text>TRENDING CONTESTS</Text>
             <ScrollView>
                 <HomeCards/>
                 {/* <HomeCards/>
@@ -30,4 +31,15 @@ export default function HomeScreen({ navigation }) {
         </>
     );
 }
+// const styles = StyleSheet.create({
+// txt:{
+//     // backgroundColor:"white",
+//     // borderRadius:10,
+//     // width:115,
+//     // padding:8,
+//     // height:20,
+//     // fontWeight:700,
 
+// },
+
+// });

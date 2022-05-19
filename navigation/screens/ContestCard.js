@@ -37,7 +37,8 @@ export default function ContestCard({ navigation }) {
             <Text style={styles.itemStyle}>Start Time : {item.start_time}</Text>
             <Text style={styles.itemStyle}>End Time : {item.end_time}</Text>
             <Text style={styles.itemStyle}>Start in 24Hours : </Text>
-            <Text style={styles.itemurl} onPress={() => Linking.openURL(item.url)}>{item.url}</Text>
+            {/* <Text style={styles.itemurl} onPress={() => Linking.openURL(item.url)}>{item.url}</Text> */}
+            <Text style={styles.url} onPress={() => Linking.openURL(item.url)}>Go To Contest</Text>
         </View>
             
         </View>
@@ -63,7 +64,7 @@ export default function ContestCard({ navigation }) {
 const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     cardContainer: { width: deviceWidth-25,
-    backgroundColor: 'orange',
+    backgroundColor: '#17D3DF',
     // height:200,
     borderRadius:20,
     marginLeft:12,
@@ -78,6 +79,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.75,
     shadowRadius:5,
     elevation: 9,
+},
+url:{
+    backgroundColor:"white",
+    borderRadius:10,
+    width:115,
+    padding:8,
+    // height:20,
+    // fontWeight:700,
 },
 itemStyle: {
     paddingLeft: 10,
