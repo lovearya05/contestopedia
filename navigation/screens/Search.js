@@ -10,14 +10,5 @@ export default function Search({ navigation }) {
             <SearchScreen/>
 
         </>
-
-        // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        //     {/* <Text
-        //         onPress={() => navigation.navigate('Home')}
-        //         style={{ fontSize: 26, fontWeight: 'bold' }}>Search Screen</Text> */}
-            
-
-
-        // </View>
     );
 }

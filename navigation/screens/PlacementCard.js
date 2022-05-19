@@ -47,14 +47,6 @@ export default function PlacementCard({ navigation }) {
 
 
     return (
-        // <View style={styles.cardContainer}>
-        //     <Text>Company Name : </Text>
-        //     <Text>Eligibility :</Text>
-        //     <Text>Last Date to Apply :</Text>
-        //     <Text>URL :</Text>
-        //     <Text>Description :</Text>
-
-        // </View>
             <FlatList 
                 data={myData}
                 renderItem={showUserData}/>

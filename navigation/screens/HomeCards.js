@@ -5,7 +5,7 @@ import { View, Text,FlatList, StyleSheet, Dimensions,Linking } from 'react-nativ
 export default function HomeCards({ navigation }) {
     
     //loading screen
-    // const[isLoaded, setIsLoaded] = useState(true);
+    const[isLoaded, setIsLoaded] = useState(true);
 
 
     //API data fetch
@@ -16,7 +16,7 @@ export default function HomeCards({ navigation }) {
             const realData = await response.json();
             setMyData(realData);
             setIsLoaded(false);
-            // console.log(realData);
+            console.log(realData);
 
         }catch(error){
             console.log(error);
@@ -52,14 +52,6 @@ export default function HomeCards({ navigation }) {
 
 
     return (
-        // <View style={styles.cardContainer}>
-        //     <Text>Company Name : </Text>
-        //     <Text>Eligibility :</Text>
-        //     <Text>Last Date to Apply :</Text>
-        //     <Text>URL :</Text>
-        //     <Text>Description :</Text>
-
-        // </View>
             <FlatList 
                 data={myData}
                 renderItem={showUserData}

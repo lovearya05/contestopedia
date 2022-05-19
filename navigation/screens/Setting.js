@@ -28,11 +28,7 @@ const styles = StyleSheet.create({
     },
    
     Text: {
-        // backgroundColor: "#e31b5e",
-        // borderRadius:8,
-        // width: "70%",
-        // height: 45,
-        // marginBottom: 20,
+
         color:"red",
      
         // alignItems: "center",

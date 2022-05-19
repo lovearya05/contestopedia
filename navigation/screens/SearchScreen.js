@@ -47,13 +47,7 @@ const SearchScreen = () => {
  
   const ItemView = ({item}) => {
     return (
-      // Flat List Item
-    //   <Text
-    //     style={styles.itemStyle}
-    //     onPress={() => getItem(item)}>{item.name}<Text>| URL:   </Text> {item.url}<Text>|</Text> {item.start_time}
-    //     {item.name.toUpperCase()}
-    //     {'.'}
-    //   </Text>
+
    <>
         <View style={styles.searchCard}>
             <Text style={styles.itemName} >{item.name}</Text>
