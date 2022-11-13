@@ -55,7 +55,7 @@ export default function HomeCards({ navigation }) {
             <FlatList 
                 data={myData}
                 renderItem={showUserData}
-                horizontal={true}
+                // horizontal={true}
                 />
     );
 }

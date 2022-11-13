@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 url:{
     backgroundColor:"white",
     borderRadius:10,
-    width:100,
+    width:115,
     padding:8,
     // height:20,
     // fontWeight:700,
